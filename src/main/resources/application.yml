@@ -1,0 +1,34 @@
+
+spring:
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+    mode: HTML
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+server:
+  port: 8301 #端口
+  max-http-header-size: 16384 # 16kb
+  servlet:
+    session:
+      timeout: 86400 #Session超时
+
+mybatis-plus:
+  # 扫描 mapper.xml
+  #  mapper-locations: classpath:/com/qskj/qpyxcommon/mapper/*.xml
+  mapper-locations: classpath:/com/qs/monitor/mapper/*.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#日志配置
+logging:
+  config: classpath:logback.xml #日志输出配置详情
+
+
+
